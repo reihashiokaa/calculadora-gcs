@@ -6,12 +6,12 @@ Laboratório colaborativo da disciplina de Gerência de Configuração de Softwa
 
 | Nome | GitHub | Papel | Módulo |
 |---|---|---|---|
-| Reinaldo | reihashiokaa | Mantenedor | Revisão, merges e proteção da main |
-| Beatriz | biavieirakkj | Desenvolvedora | Módulo A — Básico |
-| Luciana | lunah1 | Desenvolvedora | Módulo B — Potência |
-| Duda | dudamacedo26 | Desenvolvedora | Módulo C — Percentual |
-| Isabela | isaabelamg | Desenvolvedora | Módulo D — Estatística |
-| Miguel | miguelpaullo | Desenvolvedor | Módulo E — Conversão |
+| Reinaldo Andrade Hashioka| reihashiokaa | Mantenedor | Revisão, merges e proteção da main |
+| Beatriz Vieira Gomes da Silva| biavieirakkj | Desenvolvedora | Módulo A — Básico |
+| Luciana Nunes Viana | lunah1 | Desenvolvedora | Módulo B — Potência |
+| Maria Eduarda da Silva de Macedo | dudamacedo26 | Desenvolvedora | Módulo C — Percentual |
+| Isabela Martins Garcia | isaabelamg | Desenvolvedora | Módulo D — Estatística |
+| Miguel Paulo Rodrigues de Macedo| miguelpaullo | Desenvolvedor | Módulo E — Conversão |
 
 ## Link do repositório
 
