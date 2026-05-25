@@ -17,3 +17,9 @@ def km_para_milhas(km):
     """
     return int(km * 0.62137 * 100) / 100
 
+def kg_para_libras(kg):
+    """
+    Converte de quilogramas para libras
+    """
+    return int(kg * 2.2046 * 100) / 100
+
