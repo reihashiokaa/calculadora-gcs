@@ -11,5 +11,9 @@ def celsius_para_fahrenheit(celsius):
 
     return celsius * 1.8 + 32
 
-
+def km_para_milhas(km):
+    """
+    Converte quilômetros para milhas
+    """
+    return int(km * 0.62137 * 100) / 100
 
