@@ -27,21 +27,24 @@ if __name__ == '__main__':
 
 
 
-from calc_potencia import potencia
+import pytest
+from calc_potencia import potencia, raiz_quadrada, raiz_cubica
+
 
 def test_potencia():
     assert potencia(2, 3) == 8
     assert potencia(5, 0) == 1
-    assert potencia(3, 4) == 81 
+    assert potencia(3, 4) == 81
 
-
-
-from calc_potencia import raiz_quadrada
-import pytest
 
 def test_raiz_quadrada():
     assert raiz_quadrada(9) == 3
 
+
 def test_raiz_quadrada_negativa():
     with pytest.raises(ValueError):
         raiz_quadrada(-4)
+
+
+def test_raiz_cubica():
+    assert round(raiz_cubica(27), 5) == 3
