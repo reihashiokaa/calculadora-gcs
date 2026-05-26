@@ -1,13 +1,20 @@
-#merge corrigido
 import unittest
-from calc_percentual import percentual
-
-
+from calc_percentual import percentual, acrescimo
 from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
+
+# === SEUS TESTES DO MÓDULO PERCENTUAL ===
 def test_percentual():
     assert percentual(300, 15) == 45
-    assert percentual(150, 10) ==15
+    assert percentual(150, 10) == 15
+    assert percentual(50, 50) == 25
 
+def test_acrescimo():
+    assert acrescimo(300, 15) == 345
+    assert acrescimo(150, 10) == 165
+    assert acrescimo(50, 50) == 75  
+
+
+# === TESTES DO MÓDULO DE CONVERSÃO ===
 class TestCalcConversao(unittest.TestCase):
     def test_celsius_para_fahrenheit(self):
         self.assertEqual(celsius_para_fahrenheit(0), 32)
