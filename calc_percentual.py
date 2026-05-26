@@ -3,3 +3,6 @@ def percentual(valor, porcentagem):
 
 def acrescimo(valor, porcentagem):
     return valor + percentual(valor, porcentagem)
+
+def desconto(valor, porcentagem):
+    return valor - percentual(valor, porcentagem)

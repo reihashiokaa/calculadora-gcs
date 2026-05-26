@@ -2,7 +2,7 @@
 #Testes da Calculadora GCS
 
 import unittest
-from calc_percentual import acrescimo, percentual
+from calc_percentual import acrescimo, desconto, percentual
 
 from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
 
@@ -34,3 +34,8 @@ def test_acrescimo():
     assert acrescimo(200, 10) == 220
     assert acrescimo(150, 25) == 187.5
     assert acrescimo(100, 50) == 150
+
+def test_desconto():
+    assert desconto(200, 10) == 180
+    assert desconto(150, 25) == 112.5
+    assert desconto(100, 50) == 50
