@@ -1,9 +1,12 @@
-#test_calc.py
-#Testes da Calculadora GCS
-
+#merge corrigido
 import unittest
+from calc_percentual import percentual
+
 
 from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
+def test_percentual():
+    assert percentual(300, 15) == 45
+    assert percentual(150, 10) ==15
 
 class TestCalcConversao(unittest.TestCase):
     def test_celsius_para_fahrenheit(self):
