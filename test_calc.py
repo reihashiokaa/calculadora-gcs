@@ -3,7 +3,7 @@
 
 import unittest
 
-from calc_basico import somar, subtrair
+from calc_basico import somar, subtrair, multiplicar
 
 class TestCalcBasico(unittest.TestCase):
     def test_somar(self):
@@ -13,6 +13,10 @@ class TestCalcBasico(unittest.TestCase):
     def test_subtrair(self):
         self.assertEqual(subtrair(10, 4), 6)
         self.assertEqual(subtrair(3, 8), -5)
+
+    def test_multiplicar(self):
+        self.assertEqual(multiplicar(5, 6), 30)
+        self.assertEqual(multiplicar(7, 0), 0)
 
 from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
 

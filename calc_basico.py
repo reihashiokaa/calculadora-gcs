@@ -10,3 +10,7 @@ def somar(a, b):
 def subtrair(a, b):
     """Retorna a diferença entre a e b."""
     return a - b
+
+def multiplicar(a, b):
+    """Retorna o produto entre a e b."""
+    return a * b
