@@ -33,3 +33,15 @@ def test_potencia():
     assert potencia(2, 3) == 8
     assert potencia(5, 0) == 1
     assert potencia(3, 4) == 81 
+
+
+
+from calc_potencia import raiz_quadrada
+import pytest
+
+def test_raiz_quadrada():
+    assert raiz_quadrada(9) == 3
+
+def test_raiz_quadrada_negativa():
+    with pytest.raises(ValueError):
+        raiz_quadrada(-4)
