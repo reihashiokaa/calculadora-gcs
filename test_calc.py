@@ -2,6 +2,7 @@
 #Testes da Calculadora GCS
 
 import unittest
+from calc_percentual import percentual
 
 from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
 
@@ -23,3 +24,8 @@ class TestCalcConversao(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+def test_percentual():
+    assert percentual(200, 10) == 20
+    assert percentual(150, 25) == 37.5
+    assert percentual(100, 50) == 50
