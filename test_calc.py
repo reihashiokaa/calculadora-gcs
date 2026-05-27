@@ -2,6 +2,7 @@
 # Testes da Calculadora GCS
 
 import unittest
+from calc_percentual import acrescimo, desconto, percentual
 
 from calc_basico import somar, subtrair, multiplicar, dividir
 
@@ -99,3 +100,18 @@ class TestCalcPotencia(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+def test_percentual():
+    assert percentual(200, 10) == 20
+    assert percentual(150, 25) == 37.5
+    assert percentual(100, 50) == 50
+
+def test_acrescimo():
+    assert acrescimo(200, 10) == 220
+    assert acrescimo(150, 25) == 187.5
+    assert acrescimo(100, 50) == 150
+
+def test_desconto():
+    assert desconto(200, 10) == 180
+    assert desconto(150, 25) == 112.5
+    assert desconto(100, 50) == 50
