@@ -46,7 +46,35 @@ class TestCalcConversao(unittest.TestCase):
         self.assertEqual(kg_para_libras(5), 11.02)
         self.assertEqual(kg_para_libras(10), 22.04)
 
+from calc_estatistica import media, mediana, desvio_padrao
 
+class TestCalcEstatistica(unittest.TestCase):
+    def test_media(self):
+        self.assertEqual(media([10, 20, 30]), 20)
+        self.assertEqual(media([5, 5, 5, 5]), 5)
+
+    def test_media_lista_vazia(self):
+        with self.assertRaises(ValueError):
+            media([])
+
+    def test_mediana_quantidade_impar(self):
+        self.assertEqual(mediana([10, 20, 30]), 20)
+        self.assertEqual(mediana([30, 10, 20]), 20)
+
+    def test_mediana_quantidade_par(self):
+        self.assertEqual(mediana([10, 20, 30, 40]), 25)
+
+    def test_mediana_lista_vazia(self):
+        with self.assertRaises(ValueError):
+            mediana ([])
+
+    def test_desvio_padrao(self):
+        self.assertAlmostEqual(desvio_padrao([10, 20, 30]), 8.1649658093)
+    
+    def test_desvio_padrao_lista_vazia(self):
+        with self.assertRaises(ValueError):
+            desvio_padrao([])
+    
 class TestCalcPotencia(unittest.TestCase):
     def test_potencia(self):
         self.assertEqual(potencia(2, 3), 8)
