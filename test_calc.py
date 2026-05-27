@@ -46,3 +46,15 @@ class TestCalcConversao(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+from calc_estatistica import media, mediana, desvio_padrao
+
+class TestCalcEstatistica(unittest.TestCase):
+    def test_media(self):
+        self.assertEqual(media([10, 20, 30]), 20)
+        self.assertEqual(media([5, 5, 5, 5]), 5)
+
+    def test_media_lista_vazia(self):
+        with self.assertRaises(ValueError):
+            media([])
+
