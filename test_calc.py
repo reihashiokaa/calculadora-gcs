@@ -3,6 +3,29 @@
 
 import unittest
 
+from calc_basico import somar, subtrair, multiplicar, dividir
+
+class TestCalcBasico(unittest.TestCase):
+    def test_somar(self):
+        self.assertEqual(somar(2, 3), 5)
+        self.assertEqual(somar(-2, 2), 0)
+
+    def test_subtrair(self):
+        self.assertEqual(subtrair(10, 4), 6)
+        self.assertEqual(subtrair(3, 8), -5)
+
+    def test_multiplicar(self):
+        self.assertEqual(multiplicar(5, 6), 30)
+        self.assertEqual(multiplicar(7, 0), 0)
+
+    def test_dividir(self):
+        self.assertEqual(dividir(8, 2), 4)
+        self.assertEqual(dividir(5, 2), 2.5)
+
+    def test_dividir_por_zero(self):
+        with self.assertRaises(ValueError):
+            dividir(8, 0)
+
 from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
 
 class TestCalcConversao(unittest.TestCase):
