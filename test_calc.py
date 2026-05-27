@@ -58,3 +58,13 @@ class TestCalcEstatistica(unittest.TestCase):
         with self.assertRaises(ValueError):
             media([])
 
+    def test_mediana_quantidade_impar(self):
+        self.assertEqual(mediana([10, 20, 30]), 20)
+        self.assertEqual(mediana([30, 10, 20]), 20)
+
+    def test_mediana_quantidade_par(self):
+        self.assertEqual(mediana([10, 20, 30, 40]), 25)
+
+    def test_mediana_lista_vazia(self):
+        with self.assertRaises(ValueError):
+            median
