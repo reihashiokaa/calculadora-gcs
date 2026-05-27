@@ -1,5 +1,5 @@
-#test_calc.py
-#Testes da Calculadora GCS
+# test_calc.py
+# Testes da Calculadora GCS
 
 import unittest
 
@@ -27,6 +27,8 @@ class TestCalcBasico(unittest.TestCase):
             dividir(8, 0)
 
 from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
+from calc_potencia import potencia, raiz_quadrada, raiz_cubica
+
 
 class TestCalcConversao(unittest.TestCase):
     def test_celsius_para_fahrenheit(self):
@@ -43,7 +45,6 @@ class TestCalcConversao(unittest.TestCase):
         self.assertEqual(kg_para_libras(0), 0)
         self.assertEqual(kg_para_libras(5), 11.02)
         self.assertEqual(kg_para_libras(10), 22.04)
-
 
 from calc_estatistica import media, mediana, desvio_padrao
 
@@ -73,8 +74,28 @@ class TestCalcEstatistica(unittest.TestCase):
     def test_desvio_padrao_lista_vazia(self):
         with self.assertRaises(ValueError):
             desvio_padrao([])
+    
+class TestCalcPotencia(unittest.TestCase):
+    def test_potencia(self):
+        self.assertEqual(potencia(2, 3), 8)
+        self.assertEqual(potencia(5, 0), 1)
+        self.assertEqual(potencia(3, 4), 81)
+
+    def test_raiz_quadrada(self):
+        self.assertEqual(raiz_quadrada(9), 3)
+        self.assertEqual(raiz_quadrada(25), 5)
+        self.assertEqual(raiz_quadrada(0), 0)
+
+    def test_raiz_quadrada_negativa(self):
+        with self.assertRaises(ValueError):
+            raiz_quadrada(-4)
+
+    def test_raiz_cubica(self):
+        self.assertAlmostEqual(raiz_cubica(27), 3)
+        self.assertAlmostEqual(raiz_cubica(8), 2)
+        self.assertAlmostEqual(raiz_cubica(0), 0)
+        self.assertAlmostEqual(raiz_cubica(-8), -2)
+
 
 if __name__ == '__main__':
     unittest.main()
-
-    
