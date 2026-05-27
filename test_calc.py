@@ -44,8 +44,6 @@ class TestCalcConversao(unittest.TestCase):
         self.assertEqual(kg_para_libras(5), 11.02)
         self.assertEqual(kg_para_libras(10), 22.04)
 
-if __name__ == '__main__':
-    unittest.main()
 
 from calc_estatistica import media, mediana, desvio_padrao
 
@@ -67,4 +65,16 @@ class TestCalcEstatistica(unittest.TestCase):
 
     def test_mediana_lista_vazia(self):
         with self.assertRaises(ValueError):
-            median
+            mediana ([])
+
+    def test_desvio_padrao(self):
+        self.assertAlmostEqual(desvio_padrao([10, 20, 30]), 8.1649658093)
+    
+    def test_desvio_padrao_lista_vazia(self):
+        with self.assertRaises(ValueError):
+            desvio_padrao([])
+
+if __name__ == '__main__':
+    unittest.main()
+
+    
